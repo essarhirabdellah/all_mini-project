@@ -59,7 +59,7 @@ function active(){
     `)
     }}
 
-
+ rm()
  }
 
  )
@@ -83,10 +83,11 @@ function done_() {
     `)
     }}
 
-
+ rm()
  }
 
  )
+ 
 }
 let input = document.querySelector('[data-filter="all"]')
  input.addEventListener("click",renderTasks)
@@ -94,14 +95,15 @@ function rm() {
     let all_li = document.querySelectorAll("li")
     for(let li of all_li){
         li.addEventListener("click",(e) => {
+            
          if(e.target.tagName === "BUTTON"){
            x = e.target.previousElementSibling
            for(let elm of tasks){
             // console.log(elm.title,x.textContent)
               if (elm.title == x.textContent) {
                 x.parentElement.remove()
-                let indx = tasks.findIndex(elm => elm.title == x.textContant)
-
+                let indx = tasks.findIndex(el => el == elm)
+                console.log(indx)
                 tasks.splice(indx,1)
                 console.log(tasks)
               }
@@ -114,6 +116,5 @@ function rm() {
 done_()
 active()
 renderTasks();
-rm() 
-// document.addEventListener("click",rm)
+rm()
 
