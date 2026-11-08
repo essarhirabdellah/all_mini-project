@@ -1,0 +1,95 @@
+body {
+  font-family: system-ui, sans-serif;
+  background: #f5f3ff;
+  color: #1e1b4b;
+  margin: 0;
+}
+.app {
+  max-width: 440px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 4px 0 #e2e8f0;
+}
+h1 {
+  margin: 0 0 12px;
+  font-size: 22px;
+}
+.add {
+  display: flex;
+  gap: 8px;
+}
+.add input {
+  flex: 1;
+  padding: 9px 12px;
+  border: 2px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 15px;
+}
+.add button,
+.filters button {
+  border: 0;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.add button {
+  padding: 9px 14px;
+  background: #7c3aed;
+  color: white;
+}
+.error {
+  color: #e11d48;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 6px 0 0;
+}
+.filters {
+  display: flex;
+  gap: 6px;
+  margin: 14px 0 8px;
+}
+.filters button {
+  padding: 5px 12px;
+  background: #f1f5f9;
+  color: #475569;
+}
+.filters button.active {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.task {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 4px;
+  border-bottom: 2px solid #f1f5f9;
+}
+.task .title {
+  flex: 1;
+}
+.task.done .title {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+.task .delete {
+  border: 0;
+  background: none;
+  color: #94a3b8;
+  font-size: 16px;
+  cursor: pointer;
+}
+.task .delete:hover {
+  color: #e11d48;
+}
+.count {
+  color: #64748b;
+  font-size: 14px;
+  margin: 10px 0 0;
+}
